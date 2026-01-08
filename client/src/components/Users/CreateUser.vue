@@ -1,0 +1,36 @@
+<template>
+  <div>
+    <h1>Create User</h1>
+    <form>
+      <p>name: <input type="text" v-model="user.name"></p>
+      <p>lastname: <input type="text" v-model="user.lastname"></p>
+      <p>email: <input type="text" v-model="user.email"></p>
+      <p>password: <input type="text" v-model="user.password"></p>
+      <p><button type="submit">Create User</button></p>
+    </form>
+    <hr>
+    <div>
+      <p>name: {{ user.name }}</p>
+      <p>lastname: {{ user.lastname }}</p>
+      <p>email: {{ user.email }}</p>
+      <p>password: {{ user.password }}</p>
+    </div>
+  </div>
+</template>
+<script>
+export default {
+  data () {
+    return {
+      user: {
+        name: '',
+        lastname: '',
+        email: '',
+        password: '',
+        status: 'active'
+      }
+    }
+  }
+}
+</script>
+<style scoped>
+</style>
